@@ -21,7 +21,7 @@ class Treasure extends Characters  {
   show() {
     if (this.isVisible) {
       noStroke();
-      fill(255);
+      noFill();
       // fill(10, 100, 200);
       circle(this.pos.x, this.pos.y, this.size);
       image(diamond, this.pos.x-25, this.pos.y-25, diamond.width/30, diamond.height/30);
@@ -32,10 +32,10 @@ class Treasure extends Characters  {
 
 
 class Strangers extends Characters  {
-  constructor(x, y,characterNum) {
+  constructor(x, y,characterNum, characterImage) {
     super(x, y, 2, 2);
-    this.str= characterNum
-
+    this.str= characterNum;
+    this.characterImage = characterImage;
   }
 
   update(player, walls) {
@@ -58,8 +58,10 @@ text(this.str,0,0,width/2, height/2);
   show() {
     if (this.isVisible) {
       noStroke();
-        fill(255);
+      noFill();
       //fill(150, 50, 100);
+    //  image(this.str, this.pos.x-60, this.pos.y-40, this.str.width/25, this.str.height/25);
+      image(this.characterImage, this.pos.x-60, this.pos.y-40, this.characterImage.width/60, this.characterImage.height/60);
       circle(this.pos.x, this.pos.y, this.size);
     }
   }

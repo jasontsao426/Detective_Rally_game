@@ -33,11 +33,14 @@ function preload() {
   dumpling = loadImage('dumpling.png');
  //gif1 = loadImg("millyrock.gif");
 
-//backSong = loadSound('backsong.mp3');
+backSong = loadSound('backsong.mp3');
 }
 
 function setup() {
-//  backSong.play();
+	window.setTimeout(function(){
+		backSong.play()
+	}, 5000);
+
   let canvas =  createCanvas(windowWidth, windowHeight);
 
 
@@ -84,12 +87,12 @@ function setup() {
 // target.push(new target(width/10, height));
 
 characters.push(new Strangers(width*2.3/10, height*2/5,"Begger: Oh, good sir. You're in the wrong place. This is not somewhere that a men like you should be at. Look around, and you can find all you need, my friend." , c1));
-characters.push(new Strangers(width/4, height*3.5/5,"Pawnshop owner: Ugh... here comes another idoit. I already told one of you I got no one coming for no pearl necklace. Look at you pathetic boy, you're all the same to me. A bunch of faithless creatures that only works for money. Man like you got no beliefs. hahahhahaahhahha!"));
-characters.push(new Strangers(width*5.5/10, height*4.2/10,"Old man: Young man, you seems to be lost. It seems like you are searching for something. Whatever it is, are you sure it is something that you are really looking for?"));
-  characters.push(new Strangers(width*7.8/10, height*3.8/5, "Deli waitress: (crying) stop asking me about the necklace. You men are all the same, all you care about is yourself. Do you ever know how to love?"));
-  characters.push(new Strangers(width*9.7/10, height*1.2/5,"Street Punk: wasup? wasup? Show me some swag dective. Maybe that will wipe some of that sickness off of your face."));
-  characters.push(new Strangers(width*9.5/10, height*3/4,"This is a Dumpling, eat it and move on with your miserable life! "));
-	characters.push(new Strangers(width*9.5/10, height*3/4,"Nun: Ah, my child it seems like you've reached to the bottom of your heart. Do you know what you want in life now? Go, get rid of your job, marry a girl, believe in yourself, and find a life that is worth living."));
+characters.push(new Strangers(width/4, height*3.5/5,"Pawnshop owner: Ugh... here comes another idoit. I already told one of you I got no one coming for no pearl necklace. Look at you pathetic boy, you're all the same to me. A bunch of faithless creatures that only works for money. Man like you got no beliefs. hahahhahaahhahha!",c2));
+characters.push(new Strangers(width*5.5/10, height*4.2/10,"Old man: Young man, you seems to be lost. It seems like you are searching for something. Whatever it is, are you sure it is something that you are really looking for?",c4));
+  characters.push(new Strangers(width*7.8/10, height*3.8/5, "Deli waitress: (crying) stop asking me about the necklace. You men are all the same, all you care about is yourself. Do you ever know how to love?",c5));
+  characters.push(new Strangers(width*9.7/10, height*1.2/5,"Street Punk: wasup? wasup? Show me some swag dective. Maybe that will wipe some of that sickness off of your face.",c6));
+  characters.push(new Strangers(width*9.5/10, height*3/4,"This is a Dumpling, eat it and move on with your miserable life! ", dumpling));
+	characters.push(new Strangers(width*9.5/10, height*3/4,"Nun: Ah, my child it seems like you've reached to the bottom of your heart. Do you know what you want in life now? Go, get rid of your job, marry a girl, believe in yourself, and find a life that is worth living.", c7));
 
 }
 
