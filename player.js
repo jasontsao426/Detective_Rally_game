@@ -43,7 +43,7 @@ class Player extends Characters{
   }
 
   show() {
-    // let flickerPossiblity = 0;
+
     noStroke(255);
     fill(255);
     beginShape();
@@ -56,9 +56,8 @@ class Player extends Characters{
       }
     }
     endShape(CLOSE);
-  image(c3, this.pos.x-60, this.pos.y-40, c3.width/60, c3.height/60);
-    // fill(255);
-    // circle(this.pos.x, this.pos.y, this.size);
+  image(c3, this.pos.x-65, this.pos.y-40, c3.width/3, c3.height/3);
+  
   }
 
   collidesIn(walls, xOffset, yOffset) {
